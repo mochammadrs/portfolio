@@ -1,14 +1,10 @@
 <template>
-    <section class="relative min-h-screen flex items-center overflow-hidden p-8">
-        <img 
-        src="~/assets/images/splatter.svg" 
-        alt="Efek kuas cat"
-        class="absolute top-0 left-0 w-full h-full object-cover">
-        <div class="relative z-10 px-4">
-            <h1 class="text-6xl stroke-text-light text-transparent">
+    <section id="home" class="relative min-h-screen flex items-center overflow-hidden p-8">
+        <div class="relative z-10 px-8 bottom-[80px]">
+            <h1 class="text-6xl stroke-text-light text-transparent font-extrabold">
                 Mochammad RS
             </h1>
-            <p class="text-lg md:text-xl text-[#ffffff] mt-2">
+            <p class="text-2xl text-[#ffffff] mt-2 font-semibold">
                 Engineer + Junior Front-end Developer
             </p>
             <div class="flex gap-4 mt-6">
@@ -52,7 +48,7 @@
                 <Icon name="fa6-brands:x-twitter" class="text-3xl" />
                 </a>
             </div>
-            <div class="">
+            <div class="absolute bottom-[-260px]">
                 <TheScroll />
             </div>
         </div>
