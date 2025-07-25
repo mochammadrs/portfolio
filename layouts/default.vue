@@ -23,8 +23,13 @@
             <slot />
         </main>
         <footer>
-            <div class="w-full h-full mx-auto text-center text-gray-400 bg-[#000C24]">
-                <p>mochammadrs_</p>
+            <div class="relative w-full h-[215px] mx-auto flex flex-col justify-center text-center text-gray-400 bg-[#000C24]">
+                <img
+                src="~/assets/images/splatterBgFoo.svg"
+                alt="splatter bg skills"
+                class="absolute w-[313px] right-[50px] object-cover"
+                >
+                <p class="font-semibold text-[#FFFFFF]">mochammadrs_</p>
                 <div class="flex justify-center gap-4 m-3">
                 <a 
                 href="https://github.com/mochammadrs" 
@@ -66,7 +71,7 @@
                 <Icon name="fa6-brands:x-twitter" class="text-3xl" />
                 </a>
             </div>
-                <p>&copy; 2025. Dibuat dengan ❤️ oleh RS</p>
+                <p>All Right Reserved &copy; 2025. Dibuat dengan ❤️ oleh RS</p>
             </div>
         </footer>
     </div>
