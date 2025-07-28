@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="relative max-w-[1920px] mx-auto">
     <NuxtLayout>
       <img 
       src="~/assets/images/splatter.svg" 
@@ -14,7 +14,7 @@
       <img 
       src="~/assets/images/splatter3.svg" 
       alt="Efek kuas cat about skills"
-      class="absolute top-[1014px] left-[615px] object-cover">
+      class="absolute top-[1014px] right-0 object-cover">
       <SkillsSection />
       <WorksSection />
       <ContactSection />

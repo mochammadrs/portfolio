@@ -5,7 +5,7 @@
         <img
             src="~/assets/images/bgPoto.svg"
             alt="Foto profil"
-            class="absolute top-[-104px] left-[104px] z-[-1] object-cover"
+            class="absolute top-[-100px] left-[104px] z-[-1] object-cover"
           >
         <div class="w-full max-w-sm mx-auto">
           <img

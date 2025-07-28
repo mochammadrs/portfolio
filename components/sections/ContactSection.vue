@@ -27,22 +27,22 @@ function submit () {
         <img 
         src="~/assets/images/BgContact.svg" 
         alt="Traced Contact"
-        class="absolute w-full h-auto top-[40px] object-cover">
-        <div class="relative bg-white w-[1258px] rounded-md shadow-md container flex flex-col items-center mx-auto">
+        class="absolute w-full h-full top-[40px] object-cover">
+        <div class="relative bg-white w-[1258px] max-h-[600px] rounded-md shadow-md container flex flex-col items-center mx-auto">
             <h2 class="text-[#F44336] text-5xl font-bold z-10 py-4">Get In Touch</h2>
-            <div class="grid grid-cols-2">
-                <div class="w-[512px] h-[380px] flex justify-center items-center">
-                    <h2 class="text-[#000C24] font-semibold text-6xl">Drop me a line. <br>
+            <div class="grid grid-cols-1 sm:grid-cols-2 items-center px-6 gap-4 h-full">
+                <div class="w-full flex justify-center items-center">
+                    <h2 class="text-[#000C24] font-semibold text-3xl md:text-4xl lg:text-6xl">Drop me a line. <br>
                         I would like to hear from you.</h2>
                 </div>
-                <div class="w-[512px] h-[380px] flex justify-center items-center">
-                <form class="space-y-4" @submit.prevent="submit" >
+                <div class="w-full ">
+                  <form class="space-y-4" @submit="submit" >
               <div>
                 <input 
                   v-model="state.name"
                   type="text" 
                   placeholder="Name"
-                  class="w-[450px] p-2 border border-gray-300 dark:border-gray-700 rounded-md transition text-black"
+                  class="w-full p-2 border border-gray-300 dark:border-gray-700 rounded-md transition text-black"
                 >
               </div>
 
@@ -51,7 +51,7 @@ function submit () {
                   v-model="state.email"
                   type="email" 
                   placeholder="Email"
-                  class="w-[450px] p-2 border border-gray-300 dark:border-gray-700 rounded-md transition text-black"
+                  class="w-full p-2 border border-gray-300 dark:border-gray-700 rounded-md transition text-black"
                 >
               </div>
 
@@ -60,7 +60,7 @@ function submit () {
                   v-model="state.message"
                   placeholder="Message" 
                   :rows="4"
-                  class="w-[450px] p-2 border border-gray-300 dark:border-gray-700 rounded-md transition text-black"
+                  class="w-full p-2 border border-gray-300 dark:border-gray-700 rounded-md transition text-black"
                 />
               </div>
 
