@@ -1,5 +1,4 @@
 <script lang="ts" setup>
-
 import { Splide, SplideSlide } from '@splidejs/vue-splide';
 
 import '@splidejs/splide/dist/css/splide.min.css';

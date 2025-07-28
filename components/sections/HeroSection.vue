@@ -1,5 +1,5 @@
 <template>
-    <section id="home" class="relative min-h-screen flex items-center overflow-hidden p-8">
+    <section id="home" class="relative min-h-screen flex items-center p-8">
         <div class="relative z-10 px-8 bottom-[80px]">
             <h1 class="text-6xl stroke-text-light text-transparent font-extrabold">
                 Mochammad RS
