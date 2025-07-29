@@ -26,7 +26,6 @@ const splatterStyle = computed(() => {
 
 function setActiveLink(index: number) {
     activeLinkIndex.value = index
-    // isClickScrolling.value = true
     if (observer) {
         observer.disconnect();
     }
@@ -85,12 +84,12 @@ onBeforeUnmount(() => {
 <template>
     <div class="bg-white text-white min-h-screen">
         <header
-            class="p-8 md:px-12 sticky top-0 w-full z-30 bg-[#000C24]/80 border-gray-500/50 h-[75px] flex items-center backdrop-blur-lg">
+            class="p-4 md:p-8 md:px-12 sticky top-0 w-full z-30 bg-[#000C24]/80 border-gray-500/50 h-[75px] flex items-center backdrop-blur-lg hidden md:flex">
             <img src="~/assets/images/splatterNav.svg" alt="Efek kuas cat navbar"
-                class="absolute animate-pulse left-[18px] top-[-2px] object-cover w-[120px] transition-all duration-300 ease-in-out"
+                class="absolute animate-pulse left-[10px] w-[100px] md:left-[18px] top-[-2px] object-cover md:w-[120px] transition-all duration-300 ease-in-out hidden md:block"
                 :style="splatterStyle">
-            <nav class="relative z-10 container mx-auto flex justify-between items-center">
-                <ul class="flex items-center gap-12">
+            <nav class="relative z-10 container mx-auto flex justify-between items-center w-full">
+                <ul class="flex items-center justify-between md:justify-start w-full gap-4 md:gap-12 hidden md:flex">
                     <li ref="homeEl">
                         <a href="#home" :class="activeLinkIndex === 0 ? 'font-bold text-[#F44336]' : 'text-gray-400'"
                             class="text-lg hover:font-bold hover:text-[#F44336]" @click="setActiveLink(0)">Home
@@ -125,8 +124,8 @@ onBeforeUnmount(() => {
         <footer>
             <div
                 class="relative w-full h-[215px] mx-auto flex flex-col justify-center text-center text-gray-400 bg-[#000C24]">
-                <img src="~/assets/images/splatterBgFoo.svg" alt="splatter bg skills"
-                    class="absolute w-[313px] right-[50px] object-cover">
+                <img src="~/assets/images/splatterBgFoo.svg" alt="splatter bg foo"
+                    class="absolute w-[313px] right-[50px] object-cover hidden md:block">
                 <p class="font-semibold text-[#FFFFFF]">mochammadrs_</p>
                 <div class="flex justify-center gap-4 m-3">
                     <a href="https://github.com/mochammadrs" target="_blank" rel="noopener noreferrer"
@@ -155,7 +154,7 @@ onBeforeUnmount(() => {
                         <Icon name="fa6-brands:x-twitter" class="text-3xl" />
                     </a>
                 </div>
-                <p>All Right Reserved &copy; 2025. Dibuat dengan ❤️ oleh RS</p>
+                <p class="text-xs md:text-base">All Right Reserved &copy; 2025. Dibuat dengan ❤️ oleh RS</p>
             </div>
         </footer>
     </div>

@@ -1,48 +1,118 @@
 <script lang="ts" setup>
-// Definisikan daftar skill Anda di sini
-// const skills = [
-//   { name: 'HTML', percentage: 95 },
-//   { name: 'CSS & Tailwind', percentage: 90 },
-//   { name: 'JavaScript', percentage: 80 },
-//   { name: 'Vue.js / Nuxt', percentage: 85 },
-//   { name: 'React', percentage: 70 },
-//   { name: 'Node.js', percentage: 60 },
-//   { name: 'Figma', percentage: 75 },
-// ];
+import { Splide, SplideSlide } from '@splidejs/vue-splide';
+import '@splidejs/splide/dist/css/splide-core.min.css';
+
+const skillCategories = [
+  {
+    category: 'Languages & Core Tech',
+    skills: [
+      { name: 'HTML', icon: 'logos:html-5' },
+      { name: 'CSS', icon: 'logos:css-3' },
+      { name: 'JavaScript', icon: 'logos:javascript' },
+      { name: 'Python', icon: 'logos:python' },
+    ]
+  },
+  {
+    category: 'Design & Prototyping',
+    skills: [
+      { name: 'Figma', icon: 'logos:figma' },
+    ]
+  },
+  {
+    category: 'Frameworks',
+    skills: [
+      { name: 'NuxtJs', icon: 'logos:nuxt-icon' },
+      { name: 'NextJs', icon: 'logos:nextjs-icon' },
+      { name: 'Laravel', icon: 'logos:laravel' },
+      { name: 'Tailwind CSS', icon: 'logos:tailwindcss-icon' },
+    ]
+  },
+  {
+    category: 'Database & Tools',
+    skills: [
+      { name: 'MySql', icon: 'logos:mysql' },
+      { name: 'Prisma', icon: 'logos:prisma' },
+      { name: 'Firebase', icon: 'logos:firebase-icon' },
+    ]
+  },
+]
+
+const options = {
+  type: 'loop',
+  perPage: 1,
+  arrows: true,
+  pagination: true
+};
 </script>
 
 <template>
-  <section id="skills" class="relative min-h-screen flex items-center py-20 md:py-32">
-    <div class="container mx-auto px-12">
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-        <div>
-          <h2 class="text-5xl font-bold mb-2 text-[#F44336]">Skills</h2>
-          <p class="mb-12 max-w-2xl text-[#000C24] text-2xl">
+  <section id="skills" class="relative min-h-screen flex items-center py-20 px-4 md:px-12">
+    <div class="container mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center">
+        <div class="text-center md:text-left flex flex-col py-12">
+          <h2 class="text-4xl md:text-5xl font-bold mb-2 text-[#F44336]">Skills</h2>
+          <p class="mb-12 max-w-2xl mx-auto md:mx-0 text-[#000C24] text-lg md:text-2xl">
             Saya terus belajar dan mengasah kemampuan saya dalam berbagai teknologi front-end dan back-end untuk
             menciptakan produk yang solid dan modern.
           </p>
+          <div>
+          <Splide :options="options" aria-label="My Skills">
+            <SplideSlide v-for="category in skillCategories" :key="category.category">
+              <div class="text-center p-6">
+                <h3 class="text-3xl font-bold text-[#F44336] mb-8">
+                  {{ category.category }}
+                </h3>
+                <div class="flex flex-wrap gap-2 justify-center">
+                  <div v-for="skill in category.skills" :key="skill.name" class="flex flex-col items-center gap-2 p-2 rounded w-28">
+                    <Icon :name="skill.icon" class="text-3xl"/>
+                    <span class="text-[#000C24] text-lg">{{ skill.name }}</span>
+                  </div>
+                </div>
+              </div>
+            </SplideSlide>
+          </Splide>
         </div>
-        <div class="w-full max-w-sm mx-auto md:order-last">
+        </div>
+        <div class="relative w-full max-w-xs sm:max-w-sm mx-auto md:order-last">
           <img
           src="~/assets/images/bgPoto.svg"
           alt="bg Foto"
-          class="absolute top-[90px] left-[1230px] object-cover"
+          class="absolute top-[-35px] left-[280px] object-cover hidden md:block"
           >
           <img 
           src="~/assets/images/profil.jpg" 
           alt="Foto profil"
-          class="relative rounded-lg shadow-2xl w-full h-auto z-10 object-cover"
+          class="relative shadow-2xl w-full h-auto z-10 object-cover hidden md:block"
           >
         <img
           src="~/assets/images/splatterBgSkills.svg"
           alt="splatter bg skills"
-          class="absolute top-[590px] left-[1250px] object-cover"
+          class="absolute top-[450px] left-[305px] object-cover hidden md:block"
           >
         </div>
       </div>
     </div>
-    <div class="absolute px-12 left-3 bottom-[60px]">
+    <div class="absolute bottom-[10px] md:bottom-[60px] left-1/2 -translate-x-1/2 md:translate-x-3 md:left-12">
       <TheScroll2 />
     </div>
   </section>
 </template>
+
+<style>
+.splide__pagination__page {
+  background: #4A5568; 
+  width: 50px;
+  height: 5px;
+  border-radius: 2px;
+  transition: background 0.3s;
+}
+
+.splide__pagination__page.is-active {
+  background: #F44336; 
+  transform: scale(1);
+}
+
+.splide__pagination__page .splide__sr {
+  display: none;
+}
+</style>

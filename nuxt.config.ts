@@ -28,6 +28,9 @@ export default defineNuxtConfig({
     '@nuxt/image',
     '@nuxtjs/tailwindcss'
   ],
+  build: {
+    transpile: ['@splidejs/vue-splide'],
+  },
   devServer: {
     port: 2003
   },

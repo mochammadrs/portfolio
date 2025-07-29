@@ -1,13 +1,13 @@
 <template>
-    <section id="home" class="relative min-h-screen flex items-center p-8">
-        <div class="relative z-10 px-8 bottom-[80px]">
-            <h1 class="text-6xl stroke-text-light text-transparent font-extrabold">
+    <section id="home" class="bg-[#000C24] lg:bg-transparent relative min-h-screen flex items-center p-4 md:p-8">
+        <div class="relative z-10 w-full text-center md:text-left md:px-8">
+            <h1 class="text-4xl md:text-6xl stroke-text-light text-transparent font-extrabold">
                 Mochammad RS
             </h1>
-            <p class="text-2xl text-[#ffffff] mt-2 font-semibold">
+            <p class="text-lg md:text-2xl text-[#ffffff] mt-2 font-semibold">
                 Engineer + Junior Front-end Developer
             </p>
-            <div class="flex gap-4 mt-6">
+            <div class="flex gap-4 mt-6 justify-center md:justify-start">
                 <a 
                 href="https://github.com/mochammadrs" 
                 target="_blank" 
@@ -48,7 +48,7 @@
                 <Icon name="fa6-brands:x-twitter" class="text-3xl" />
                 </a>
             </div>
-            <div class="absolute bottom-[-260px]">
+            <div class="absolute left-1/2 -translate-x-1/2 bottom-[-230px] md:translate-x-0 md:left-auto md:bottom-[-260px]">
                 <TheScroll />
             </div>
         </div>
