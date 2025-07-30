@@ -31,7 +31,6 @@ const skillCategories = [
     category: 'Database & Tools',
     skills: [
       { name: 'MySql', icon: 'logos:mysql' },
-      { name: 'Prisma', icon: 'logos:prisma' },
       { name: 'Firebase', icon: 'logos:firebase-icon' },
     ]
   },
@@ -99,20 +98,21 @@ const options = {
 </template>
 
 <style>
-.splide__pagination__page {
-  background: #4A5568; 
-  width: 50px;
-  height: 5px;
-  border-radius: 2px;
-  transition: background 0.3s;
-}
-
-.splide__pagination__page.is-active {
-  background: #F44336; 
-  transform: scale(1);
-}
-
-.splide__pagination__page .splide__sr {
-  display: none;
-}
+  .splide__pagination__page {
+    background: #4A5568;
+    width: 50px;
+    height: 5px;
+    margin-top: 100px;
+    border-radius: 2px;
+    transition: background 0.3s;
+  }
+  
+  .splide__pagination__page.is-active {
+    background: #F44336;
+    transform: scale(1);
+  }
+  
+  .splide__pagination__page .splide__sr {
+    display: none;
+  }
 </style>

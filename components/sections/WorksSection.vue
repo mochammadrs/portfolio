@@ -17,18 +17,18 @@ const projects = [
   {
     id: 1,
     title: 'Penicillisolver',
-    description: 'An inquisitive Computer Science Engineering student, skilled in leadership, seeking to leverage solid development skills with focus on collaboration, communication and passion.',
+    description: 'Aplikasi lintas platform yang ditujukan untuk membantu dokter dalam menganalisis tren resistensi bakteri.',
     image: 'https://images.unsplash.com/photo-1526925539332-aa3b66e35444?q=80&w=765&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D', // Ganti dengan path gambar Anda
-    tags: ['HTML5', 'CSS3', 'JavaScript', 'ReactJS'],
-    githubUrl: 'https://github.com/username/simon-game',
+    tags: ['NextJs', 'Python', 'JavaScript', 'CSS', 'Firebase'],
+    githubUrl: 'https://github.com/Shua24/penicillisolver',
   },
   {
     id: 2,
-    title: 'Project Beta',
-    description: 'Deskripsi singkat untuk Project Beta, fokus pada fitur-fitur utamanya dan teknologi yang digunakan.',
+    title: 'ReadyNotes',
+    description: 'aplikasi web untuk membuat catatan pribadi yang dirancang dengan antarmuka modern, cepat, dan minimalis.',
     image: 'https://images.unsplash.com/photo-1509966756634-9c23dd6e6815?q=80&w=776&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    tags: ['Vue.js', 'Nuxt.js', 'Tailwind CSS'],
-    githubUrl: 'https://github.com/username/project-beta',
+    tags: ['NuxtJs', 'VueJs', 'Tailwind CSS', 'MySql'],
+    githubUrl: 'https://github.com/mochammadrs/ReadyNotes',
   },
 ];
 </script>
@@ -74,24 +74,3 @@ const projects = [
     </div>
   </section>
 </template>
-
-<style>
-.splide__pagination__page {
-  background: #4A5568;
-  width: 25%;
-  height: 4px;
-  border-radius: 2px;
-  margin: 0 8px;
-  transition: background 0.3s;
-}
-
-.splide__pagination__page.is-active {
-  background: #E53E3E;
-  transform: scale(1);
-}
-
-
-.splide__pagination__page .splide__sr {
-  display: none;
-}
-</style>
