@@ -23,8 +23,6 @@ const skillCategories = [
     skills: [
       { name: 'NuxtJs', icon: 'logos:nuxt-icon' },
       { name: 'NextJs', icon: 'logos:nextjs-icon' },
-      { name: 'Laravel', icon: 'logos:laravel' },
-      { name: 'Tailwind CSS', icon: 'logos:tailwindcss-icon' },
     ]
   },
   {
@@ -79,14 +77,14 @@ const options = {
           class="absolute top-[-35px] left-[280px] object-cover hidden md:block"
           >
           <img 
-          src="~/assets/images/profil.jpg" 
+          src="https://images.unsplash.com/photo-1551033406-611cf9a28f67?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
           alt="Foto profil"
-          class="relative shadow-2xl w-full h-auto z-10 object-cover hidden md:block"
+          class="relative shadow-2xl w-full h-auto z-10 object-cover hidden md:block md:[clip-path:polygon(0%_0%,100%_0%,100%_100%,0%_90%)]"
           >
         <img
           src="~/assets/images/splatterBgSkills.svg"
           alt="splatter bg skills"
-          class="absolute top-[450px] left-[305px] object-cover hidden md:block"
+          class="absolute top-[505px] left-[305px] object-cover hidden md:block"
           >
         </div>
       </div>

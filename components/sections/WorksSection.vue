@@ -42,7 +42,7 @@ const projects = [
             <div class="flex justify-center md:justify-start relative md:left-5">
               <NuxtImg 
               :src="project.image" :alt="project.title"
-                class="relative md:left-[100px] shadow-2xl w-[250px] md:w-[400px] h-auto object-cover z-20" />
+                class="relative md:left-[100px] shadow-2xl w-[250px] md:w-[400px] h-auto object-cover z-20 md:[clip-path:polygon(0%_0%,100%_0%,100%_90%,0%_100%)]" />
               <img 
               src="~/assets/images/bgPoto.svg" alt="bg Foto"
                 class="absolute top-[-50px] left-[55px] object-cover hidden md:block">

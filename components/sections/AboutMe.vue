@@ -11,7 +11,7 @@
           <img
             src="~/assets/images/profil.jpg"
             alt="Foto profil"
-            class="shadow-2xl w-full h-auto object-cover"
+            class="shadow-2xl w-full h-auto object-cover md:[clip-path:polygon(0%_0%,100%_0%,100%_90%,0%_100%)]"
           >
         </div>
         <div>
