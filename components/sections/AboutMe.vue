@@ -9,7 +9,7 @@
           >
         <div class="w-full max-w-sm mx-auto">
           <img
-            src="~/assets/images/foto-profil.jpg"
+            src="~/assets/images/profil.jpg"
             alt="Foto profil"
             class="shadow-2xl w-full h-auto object-cover md:[clip-path:polygon(0%_0%,100%_0%,100%_90%,0%_100%)]"
           >
